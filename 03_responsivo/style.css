@@ -1,0 +1,657 @@
+
+/*
+   CONFIGURAÇÕES GERAIS MOBILE FIRST
+*/
+
+* {
+    box-sizing: border-box; /* soma padding e border à largura e altura */
+}
+
+html {
+    scroll-behavior: smooth; /* rolagem suave */
+}
+
+body {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: #f5f7f2;
+    color: #343b35;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-wrap: anywhere; /* evita que textos grandes ultrapassem a tela */
+}
+
+/*
+   CABEÇALHO E INTRODUÇÃO
+*/
+
+header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 25px 20px;
+    background-color: #e5eee1;
+    border-radius: 14px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #294936;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+header > p {
+    margin-top: 12px;
+    color: #607563;
+    font-size: 1.05rem;
+}
+
+header figure {
+    position: static;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+}
+
+header figure img {
+    display: block;
+    width: 165px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+}
+
+header figcaption {
+    margin-top: 8px;
+    color: #718073;
+    font-size: 0.85rem;
+}
+
+/*
+   NAVEGAÇÃO
+*/
+
+nav {
+    width: 100%;
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #cbd9c7;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    min-width: 0;
+}
+
+nav a {
+    display: block;
+    padding: 7px 12px;
+    border-radius: 5px;
+    color: #3f6047;
+    font-size: 0.94rem;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background-color: #d2e0ce;
+    color: #263f2e;
+}
+
+/*
+   CONTEÚDO PRINCIPAL
+*/
+
+main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+section {
+    min-width: 0;
+    margin: 0;
+    padding: 25px 20px;
+}
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #344e41;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+section h2::after {
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin-top: 8px;
+    background-color: #78966f;
+    content: "";
+}
+
+section p {
+    margin: 12px 0;
+}
+
+/*
+   SOBRE MIM
+*/
+
+#sobre {
+    padding: 25px 20px;
+    background-color: #eaf0e6;
+    border-radius: 10px;
+}
+
+#sobre p {
+    max-width: 900px;
+}
+
+/*
+   FORMAÇÃO ACADÊMICA
+*/
+
+#formacao {
+    padding-left: 25px;
+}
+
+#formacao ul {
+    padding-left: 25px;
+    list-style-type: square;
+}
+
+#formacao li {
+    margin-bottom: 14px;
+    padding-left: 5px;
+}
+
+#formacao li::marker {
+    color: #668761;
+}
+
+/*
+   EXPERIÊNCIAS E PROJETOS
+*/
+
+#experiencias {
+    padding: 25px 20px;
+    background-color: #edf1e9;
+    border-radius: 10px;
+}
+
+#experiencias article {
+    min-width: 0;
+    margin: 28px 0;
+    padding-left: 15px;
+    border-left: 3px solid #91a889;
+}
+
+article h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #3d5d45;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+article a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 9px 18px;
+    border-radius: 5px;
+    background-color: #496b50;
+    color: #ffffff;
+    font-size: 0.92rem;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+article a:hover {
+    background-color: #304d38;
+    transform: translateY(-2px);
+}
+
+/*
+   HABILIDADES E TECNOLOGIAS
+*/
+
+#habilidades ul {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#habilidades li {
+    min-width: 0;
+    padding: 18px 15px;
+    border-radius: 8px;
+    background-color: #e5eee1;
+    color: #3e5d45;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    transition: background-color 0.2s;
+}
+
+#habilidades li:hover {
+    background-color: #dce8d7;
+}
+
+/*
+   PERFIS PROFISSIONAIS
+*/
+
+#perfil {
+    padding: 25px 20px;
+}
+
+#perfil ul {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+#perfil li {
+    min-width: 0;
+}
+
+#perfil a {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #cbd9c7;
+    border-radius: 6px;
+    background-color: #e3ecdf;
+    color: #3f6047;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#perfil a:hover {
+    background-color: #496b50;
+    color: #ffffff;
+}
+
+/*
+   CONTATO E FORMULÁRIO
+*/
+
+#contatar {
+    padding: 25px 20px;
+    background-color: #e8efe4;
+    border-radius: 10px;
+}
+
+#contatar > p {
+    color: #607563;
+    text-align: center;
+}
+
+#contatar address {
+    margin: 15px 0;
+    color: #46564a;
+    font-style: normal;
+    text-align: center;
+}
+
+#contatar address a {
+    display: inline-block;
+    max-width: 100%;
+    margin: 5px 0;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background-color: #dce8d7;
+    color: #3f6047;
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#contatar address a:hover {
+    background-color: #496b50;
+    color: #ffffff;
+}
+
+#contatar form {
+    width: 100%;
+    max-width: 580px;
+    margin: 30px auto 10px;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 20px 15px;
+    border: 1px solid #cbd9c7;
+    border-radius: 8px;
+    background-color: #f8faf6;
+}
+
+legend {
+    padding: 0 12px;
+    color: #344e41;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+form p {
+    margin: 15px 0;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #46564a;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 11px 12px;
+    border: 1px solid #cbd6c8;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #343b35;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #a3b18a;
+    border-color: #66836a;
+}
+
+button {
+    max-width: 100%;
+    padding: 10px 17px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dce7d8;
+    color: #637364;
+    font: inherit;
+}
+
+/*
+   ACESSIBILIDADE
+*/
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #78927d;
+    outline-offset: 3px;
+}
+
+/*
+   RODAPÉ
+*/
+
+footer {
+    margin-top: 20px;
+    padding: 25px 20px;
+    border-radius: 10px;
+    background-color: #344e41;
+    color: #e8efe4;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    display: inline-block;
+    margin-top: 5px;
+    color: #c7ddbd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+/*
+   TABLET A PARTIR DE 768px
+*/
+
+@media (min-width: 48rem) {
+
+    body {
+        padding: 25px 35px;
+    }
+
+    header {
+        padding: 35px;
+    }
+
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    /* Navegação em três colunas */
+
+    nav ul {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    /* Conteúdo principal em duas colunas */
+
+    main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    section h2 {
+        font-size: 1.65rem;
+    }
+
+    /* Sobre, formação, experiências e contato ocupam toda a largura */
+
+    #sobre,
+    #formacao,
+    #experiencias,
+    #contatar {
+        grid-column: 1 / -1;
+    }
+
+    /* Experiências e projetos em duas colunas */
+
+    #experiencias {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 20px;
+    }
+
+    #experiencias h2 {
+        grid-column: 1 / -1;
+    }
+
+    #experiencias article {
+        margin: 15px 0;
+    }
+
+    /* Habilidades em uma coluna interna */
+
+    #habilidades ul {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Perfis profissionais em uma coluna interna */
+
+    #perfil ul {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    fieldset {
+        padding: 25px;
+    }
+}
+
+/*
+   DESKTOP A PARTIR DE 1200px
+*/
+
+@media (min-width: 75rem) {
+
+    body {
+        padding: 30px 45px;
+    }
+
+    /* CABEÇALHO */
+
+    header {
+        grid-template-columns: minmax(0, 1fr) 200px;
+        grid-template-areas:
+            "titulo foto"
+            "descricao foto"
+            "navegacao navegacao";
+        align-items: center;
+        min-height: 350px;
+        padding: 35px;
+    }
+
+    header h1 {
+        grid-area: titulo;
+    }
+
+    header > p {
+        grid-area: descricao;
+    }
+
+    header figure {
+        grid-area: foto;
+        position: static;
+        width: 200px;
+        margin: 0;
+    }
+
+    header nav {
+        grid-area: navegacao;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 40px;
+        margin-right: 0;
+    }
+
+    nav ul {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+
+    main {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    /* cada seção ocupa toda a largura do conteúdo */
+
+    #sobre,
+    #formacao,
+    #experiencias,
+    #habilidades,
+    #perfil,
+    #contatar {
+        grid-column: 1 / -1;
+    }
+
+    /* EXPERIÊNCIAS E PROJETOS */
+
+    #experiencias {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 25px;
+    }
+
+    #experiencias h2 {
+        grid-column: 1 / -1;
+    }
+
+    #experiencias article {
+        margin: 15px 0;
+    }
+
+    /* HABILIDADES */
+
+    #habilidades ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* PERFIS PROFISSIONAIS */
+
+    #perfil ul {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-width: none;
+        margin: 0;
+    }
+
+    /* CONTATO */
+
+    #contatar form {
+        max-width: 580px;
+    }
+}
+
+/*
+   ACESSIBILIDADE - MOVIMENTO REDUZIDO
+*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
